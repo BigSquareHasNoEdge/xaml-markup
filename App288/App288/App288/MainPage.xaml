@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:App288"
+             mc:Ignorable="d"
+             x:Class="App288.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:stringToImageSourceConverter x:Key="stringToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Image Source="{local:ImageResource App288.ttt.png}" HeightRequest="50" WidthRequest="50" BackgroundColor="Yellow"/>
+
+        <Image Source="{Binding Path, Converter={StaticResource stringToImage}}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>
